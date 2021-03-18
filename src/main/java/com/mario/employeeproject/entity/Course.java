@@ -26,4 +26,12 @@ public class Course {
 
     @ManyToOne
     private Employee employee;
+
+    public void setAllParameters(Course modifyCourseRequest) {
+        name = modifyCourseRequest.getName();
+        numberOfHours = modifyCourseRequest.getNumberOfHours();
+        graduationDiploma = modifyCourseRequest.getGraduationDiploma();
+        value = modifyCourseRequest.getValue();
+        year = modifyCourseRequest.getYear();
+    }
 }

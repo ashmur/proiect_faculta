@@ -26,4 +26,11 @@ public class Employee {
 
     @OneToMany
     List<Course> courseList;
+
+    public void setAllParameters(Employee modifyEmployeeRequest) {
+        name = modifyEmployeeRequest.getName();
+        firm = modifyEmployeeRequest.getFirm();
+        position = modifyEmployeeRequest.getPosition();
+        date_of_employment = modifyEmployeeRequest.getDate_of_employment();
+    }
 }
